@@ -1,5 +1,5 @@
 - name: BIG-IP SETUP
-  hosts: lb
+  hosts: bigip41
   connection: local
   gather_facts: false
 
