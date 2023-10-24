@@ -14,6 +14,6 @@
           server_port: "{{ f5_admin_port }}"
           validate_certs: false
     - name: Create a Node
-      f5networks.f5_modules.bigip_command:
+      f5networks.f5_modules.bigip_node:
         host: 10.20.30.40
         name: 10.20.30.40
