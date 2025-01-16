@@ -1,5 +1,5 @@
 - name: BIG-IP SETUP
-  hosts: bigip41
+  hosts: 10.1.1.83
   connection: local
   gather_facts: false
 
@@ -9,9 +9,9 @@
       ansible.builtin.set_fact:
         provider:
           server: "{{ ansible_host }}"
-          # user: "{{ f5_admin_user }}"
-          # password: "{{ f5_admin_password }}"
-          server_port: "{{ f5_admin_port }}"
+          user: "admin"
+          password: "Consys1994"
+          server_port: 443
           validate_certs: false
     - name: Create a Node
       f5networks.f5_modules.bigip_node:
