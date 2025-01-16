@@ -1,5 +1,5 @@
 - name: BIG-IP SETUP
-  hosts: f5
+  hosts: 10.1.1.83
   connection: local
   gather_facts: false
 
@@ -8,7 +8,7 @@
     - name: Setup provider
       ansible.builtin.set_fact:
         provider:
-          server: "{{ inventory_hostname }}"
+          server: 10.1.1.83
           user: "admin"
           password: "Consys1994"
           server_port: 443
