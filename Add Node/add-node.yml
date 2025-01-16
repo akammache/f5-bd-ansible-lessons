@@ -2,18 +2,15 @@
   hosts: 10.1.1.83
   connection: local
   gather_facts: false
+  vars:
+    server: "{{inventory_hostname}}"
+    user: "admin"
+    password: "Consys1994"
+    validate_certs: false
 
   tasks:
-
-    - name: Setup provider
-      ansible.builtin.set_fact:
-        provider:
-          server: "10.1.1.83"
-          user: "admin"
-          password: "Consys1994"
-          server_port: 443
-          validate_certs: false
     - name: Create a Node
       f5networks.f5_modules.bigip_node:
+        provider: "{{auth}}"
         host: 10.20.30.40
         name: 10.20.30.40
