@@ -1,5 +1,5 @@
 - name: BIG-IP SETUP
-  hosts: 10.1.1.83
+  hosts: f5
   connection: local
   gather_facts: false
 
