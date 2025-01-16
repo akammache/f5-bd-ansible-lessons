@@ -8,7 +8,7 @@
     - name: Setup provider
       ansible.builtin.set_fact:
         provider:
-          server: 10.1.1.83
+          server: "10.1.1.83"
           user: "admin"
           password: "Consys1994"
           server_port: 443
