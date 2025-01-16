@@ -3,10 +3,11 @@
   connection: local
   gather_facts: false
   vars:
-    server: "{{inventory_hostname}}"
-    user: "admin"
-    password: "Consys1994"
-    validate_certs: false
+    auth:
+      server: "{{inventory_hostname}}"
+      user: "admin"
+      password: "Consys1994"
+      validate_certs: false
 
   tasks:
     - name: Create a Node
