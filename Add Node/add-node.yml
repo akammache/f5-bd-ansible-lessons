@@ -7,6 +7,7 @@
       server: "{{inventory_hostname}}"
       user: "admin"
       password: "Consys1994"
+      server_port: 443
       validate_certs: false
 
   tasks:
